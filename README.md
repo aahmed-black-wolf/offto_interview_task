@@ -1,7 +1,7 @@
-# Senior Frontend Engineer Role task for OFFTO
+# Frontend Engineer Role assessment for OFFTO
 
 ## Objective:
-The task is to build a frontend UI that replicates the provided design and integrates with specific APIs for destinations and hotel search functionality.
+The assessment is to build a frontend UI that replicates the provided design and integrates with specific APIs for destinations and hotel search functionality.
 
 ---
 
@@ -102,6 +102,7 @@ The task is to build a frontend UI that replicates the provided design and integ
   - Selected destination.
   - Check-in and check-out dates.
   - Passengers and room information.
+  - Ensure that the search button reflects the loading status of the request. Once the response is received, the button should stop indicating the loading state. Additionally, confirm that the data originates from the backend by verifying it in the network tab.
 
 ### Functional Requirements
 1. **Destination Search**
