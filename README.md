@@ -1,4 +1,4 @@
-# Senior Frontend Developer Task for OffTo
+# Senior Frontend Engineer Role task for OFFTO
 
 ## Objective:
 The task is to build a frontend UI that replicates the provided design and integrates with specific APIs for destinations and hotel search functionality.
@@ -125,119 +125,6 @@ The task is to build a frontend UI that replicates the provided design and integ
 
 ---
 
-## Phase 3: Hotel List and Infinite Scrolling
-
-### Requirements:
-#### UI Components
-1. **Hotel List Display**
-   - The hotel details should be displayed in a list format.
-   - Implement infinite scrolling to load additional hotel results as the user scrolls down.
-
-2. **Skeleton Loader**
-   - Initially, display a skeleton loader to indicate that the data is loading, similar to the provided design.
-
-3. **Hotel Details**
-   - The first request should display mock hotel details, including:
-     - Hotel name.
-     - Hotel image.
-     - Distance from the center and location (spaced as shown in the design).
-     - Include `isDummy: true` in the request body to fetch dummy data while waiting for the actual data.
-     - Ensure no duplicate hotels are displayed in the list.
-   - After the second request, update the list to include the price returned by the response.
-
-### API Integration
-#### First Request: Mock Hotel Details
-- **Task:** Display mock hotel data while waiting for the second request to fetch actual details.
-- **Request Body Example:**
-  ```json
-  {
-      "DestinationCity": "Dubai",
-      "CheckInDate": "2024-04-25",
-      "CheckOutDate": "2024-04-29",
-      "CountryofResidence": "KW",
-      "CountryOfNationality": "KW",
-      "Room": [
-          {
-              "NumberOfAdult": 2,
-              "NumberOfChild": 1,
-              "AgeOfChild": [9]
-          }
-      ],
-      "currencyCode": "KWD",
-      "locale": "en",
-      "isDummy": true
-  }
-  ```
-
-#### Second Request: Hotel Prices
-- **URL:** `{{base_url}}/get_all_hotels?page=1`
-- **Method:** POST
-- **Request Body Example:**
-  ```json
-  {
-      "DestinationCity": "Dubai",
-      "CheckInDate": "2024-04-25",
-      "CheckOutDate": "2024-04-29",
-      "CountryofResidence": "KW",
-      "CountryOfNationality": "KW",
-      "Room": [
-          {
-              "NumberOfAdult": 2,
-              "NumberOfChild": 1,
-              "AgeOfChild": [9]
-          }
-      ],
-      "currencyCode": "KWD",
-      "locale": "en"
-  }
-  ```
-- **Response:** Actual hotel data, including prices.
-
-### Functional Requirements
-1. **Skeleton Loader**
-   - Show a skeleton loader immediately after the user submits the search request.
-
-2. **Infinite Scrolling**
-   - Load and display additional hotels when the user scrolls to the bottom of the list.
-
-3. **Update Hotel List**
-   - Replace mock data with actual hotel data from the second request.
-
-4. **Prevent Duplicate Hotels**
-   - Ensure that no hotel appears multiple times in the list.
-
----
-
-## UI Details
-1. **Hotel Name and Image**
-   - Ensure sufficient spacing between the hotel name, image, location, and distance from the center.
-
-2. **Price Display**
-   - Display prices fetched from the second request prominently below the hotel name.
-
-3. **Design Consistency**
-   - Match the provided design closely for both the skeleton loader and final hotel details display.
-
-4. **Screens Provided**
-   - The screens included in the design provide guidance for the following:
-     - Header with a language switcher.
-     - Linear gradient background with accompanying text.
-     - Proper alignment of components to match the design.
-
----
-
-## Notes for Candidates
-- **Styling:** Maintain a professional and clean design consistent with the provided UI.
-- **Error Handling:**
-  - Validate inputs before making API calls.
-  - Display user-friendly error messages for API failures.
-- **Documentation:** Include a README file explaining how to run your solution.
-  - Ensure you follow the repository's project structure.
-  - The repository contains examples of API requests, types, and project structure.
-  - Utilize `next-ui` with Tailwind CSS for styling and integrate built-in functions in the `fetch` folder, leveraging React Query for data fetching and state management.
-
----
-
 ## Deliverables
 1. Source code for the UI.
 2. A working prototype of the interface.
@@ -260,4 +147,3 @@ The task is to build a frontend UI that replicates the provided design and integ
 ![Screen 2](./public/screen-2.png)
 ![Screen 3](./public/screen-3.png)
 ![Screen 4](./public/screen-4.png)
-![Screen 5](./public/screen-5.png)
