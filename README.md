@@ -256,8 +256,8 @@ The task is to build a frontend UI that replicates the provided design and integ
 
 ## Screens
 
-![Screen 1]('./public/screen-1.png')
-![Screen 2]('./public/screen-2.png')
-![Screen 3]('./public/screen-3.png')
-![Screen 4]('./public/screen-4.png')
-![Screen 5]('./public/screen-5.png')
+![Screen 1](./public/screen-1.png)
+![Screen 2](./public/screen-2.png)
+![Screen 3](./public/screen-3.png)
+![Screen 4](./public/screen-4.png)
+![Screen 5](./public/screen-5.png)
