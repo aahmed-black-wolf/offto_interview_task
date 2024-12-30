@@ -37,7 +37,7 @@ export default function HotelSearchContent() {
     const checkInDate = new Date(formValues.checkIn as string);
     const checkOutDate = new Date(formValues.checkOut as string);
     const currentDate = new Date();
-    
+
     currentDate.setHours(0, 0, 0, 0);
     checkInDate.setHours(0, 0, 0, 0);
     checkOutDate.setHours(0, 0, 0, 0);
@@ -49,7 +49,7 @@ export default function HotelSearchContent() {
     if (checkOutDate <= checkInDate) {
       return toaster.error(t('errors.checkout_before_checkin'));
     }
-    
+
     await searchHotels({
       destination: formValues.destination as string,
       checkIn: formValues.checkIn as string,
@@ -69,7 +69,7 @@ export default function HotelSearchContent() {
             <div className="flex flex-col md:flex-row gap-4">
               <div className="w-full md:w-1/3 lg:w-1/4">
                 <Image
-                  src={hotel.HotelDetails.ThumbImage} 
+                  src={hotel.HotelDetails.ThumbImage}
                   alt={hotel.HotelDetails.HotelName}
                   width={300}
                   height={200}
@@ -112,17 +112,17 @@ export default function HotelSearchContent() {
     <form onSubmit={handleFormSubmission} className="flex gap-6 md:gap-10 flex-col justify-between items-center min-h-[300px] w-full max-w-7xl mx-auto p-4">
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center gap-4 w-full">
         <SearchDestination />
-        <DatePicker 
-          isRequired 
-          name="checkIn" 
-          className="w-full" 
+        <DatePicker
+          isRequired
+          name="checkIn"
+          className="w-full"
           label={t('labels.check_in')}
           errorMessage={t('validation.field_required')}
         />
-        <DatePicker 
-          isRequired 
-          name="checkOut" 
-          className="w-full" 
+        <DatePicker
+          isRequired
+          name="checkOut"
+          className="w-full"
           label={t('labels.check_out')}
           errorMessage={t('validation.field_required')}
         />
@@ -131,7 +131,7 @@ export default function HotelSearchContent() {
       <Button
         type="submit"
         isLoading={isLoading}
-        className="w-full md:w-auto min-w-[200px] bg-[#00B3BA] transition-all duration-200 hover:bg-[#198b8f] border rounded-xl text-white p-2 grid items-center text-lg font-medium"
+        className="w-full md:w-auto min-w-[200px] bg-[#00B3BA] transition-all duration-200 hover:bg-[#198b8f] border rounded-xl text-white p-1 grid items-center text-lg font-medium"
       >
         {t('labels.search')}
       </Button>

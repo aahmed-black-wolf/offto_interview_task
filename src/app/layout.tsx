@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import {useLocale} from 'next-intl';
+import { useLocale } from 'next-intl';
 
 import './styles.css';
 import { Providers } from './providers';
@@ -15,18 +15,18 @@ export default function RootLayout({ children }: Props) {
   return (
     <html lang={locale} dir={dir}>
       <body>
-         <Providers>
+        <Providers>
 
           {children}
         </Providers>
         <Toaster
-      toastOptions={{
-        duration: 5000,
-        style: {
-          direction: locale === 'ar' ? 'rtl' : 'ltr',
-        },
-      }}
-    />
+          toastOptions={{
+            duration: 5000,
+            style: {
+              direction: locale === 'ar' ? 'rtl' : 'ltr',
+            },
+          }}
+        />
 
       </body>
     </html>

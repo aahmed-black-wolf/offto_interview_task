@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { JSX, useState } from "react";
 import TabButton from "./TabButton";
 import FlightSearchContent from "./FlightSearchContent";
 import HotelSearchContent from "./HotelSearchContent";
@@ -27,7 +27,7 @@ export default function SearchWrapper() {
   const renderContent = () => {
     switch (activeTab) {
       case 'flight':
-        return <FlightSearchContent/>;
+        return <FlightSearchContent />;
       case 'hotel':
         return <HotelSearchContent />;
       case 'packages':
