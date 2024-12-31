@@ -15,25 +15,31 @@ This project is a frontend application designed for the OFFTO assessment. It rep
 
 1. **Clone the Repository**
    ```bash
-   git clone <repository-url>
+   git clone git@github.com:aahmed-black-wolf/offto_interview_task.git
    cd offto_interview_task
    ```
 
-2. **Install Dependencies**
+2. **Switch to My Branch**
+   Make sure to switch to my branch:
+   ```bash
+   git checkout feat/hotel-search
+   ```
+
+3. **Install Dependencies**
    Ensure you have Node.js installed. Then run:
    ```bash
    pnpm add
    ```
 
-3. **Environment Variables**
+4. **Environment Variables**
    Create a `.env` file based on the provided `.env.example` and fill in the required variables.
 
-4. **Run the Development Server**
+5. **Run the Development Server**
    ```bash
    pnpm dev
    ```
 
-5. **Access the Application**
+6. **Access the Application**
    Open your browser and go to `http://localhost:3000`.
 
 ## Assumptions
