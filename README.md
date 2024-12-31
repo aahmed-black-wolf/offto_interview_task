@@ -1,6 +1,6 @@
 # Frontend Engineer Role assessment for OFFTO
 
-## Candidate Notes BY SHEHAB FEKRY
+## Notes BY SHEHAB FEKRY
 
 Hey there, i just wanted to mention that i have done my best implementing this feature  
 even though i have dropped some concepts implmentations on porpose, because i was under alot of pressure trying to implement it
