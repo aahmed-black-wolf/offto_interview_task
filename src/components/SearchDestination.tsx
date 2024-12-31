@@ -8,7 +8,7 @@ const SearchDestination = () => {
     const [searchInput, setSearchInput] = useState('');
     const [isSelected, setIsSelected] = useState(false);
     const { cities, isLoading, fetchCities } = useGetCities();
-    const debouncedSearchInput = useDebounce(searchInput, 500);
+    const debouncedSearchInput = useDebounce(searchInput, 250);
     const t = useTranslations('search.HotelSearchContent');
 
     useEffect(() => {

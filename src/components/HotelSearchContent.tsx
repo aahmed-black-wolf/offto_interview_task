@@ -13,6 +13,7 @@ export default function HotelSearchContent() {
     rooms: 0,
     adults: 0,
     children: 0,
+    ageOfChildrens: 0,
     infants: 0,
   };
 
@@ -28,6 +29,10 @@ export default function HotelSearchContent() {
 
     if (roomsData.rooms < 1 || roomsData.adults < 1) {
       return toaster.error(t('errors.rooms_adults_required'));
+    }
+
+    if (roomsData.children >= 1 && roomsData.ageOfChildrens == 0) {
+      return toaster.error(t('errors.ages_of_childrens_required'));
     }
 
     if (!formValues.destination || !formValues.checkIn || !formValues.checkOut) {
@@ -57,7 +62,6 @@ export default function HotelSearchContent() {
       roomsData
     });
     setShowResults(true);
-    toaster.success(t('success.hotels_found'));
   };
 
 

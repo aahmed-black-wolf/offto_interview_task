@@ -7,14 +7,15 @@ import {
   Button,
   useDisclosure,
 } from "@nextui-org/react";
-import { useState } from "react";
 import Counter from "./Counter";
 import { useTranslations } from 'next-intl';
+import React, { useState, useEffect } from 'react';
 
 interface RoomsData {
   rooms: number;
   adults: number;
   children: number;
+  ageOfChildrens: number;
   infants: number;
 }
 
@@ -24,9 +25,10 @@ interface RoomsModalProps {
   initialData: RoomsData;
 }
 
-export default function RoomsModal({ data, setData, initialData }: RoomsModalProps) {
+const RoomsModal: React.FC<RoomsModalProps> = ({ data, setData, initialData }) => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const t = useTranslations('rooms_modal');
+
 
   const increment = (key: keyof RoomsData, max = Infinity) => {
     setData((prev) => {
@@ -87,6 +89,16 @@ export default function RoomsModal({ data, setData, initialData }: RoomsModalPro
                     onDecrement={() => decrement("children")}
                   />
 
+                  {data.children > 0 && (
+                    <Counter
+                      label={t('ageOfChildrens.label')}
+                      subLabel={t('ageOfChildrens.sublabel')}
+                      value={data.ageOfChildrens}
+                      onIncrement={() => increment("ageOfChildrens")}
+                      onDecrement={() => decrement("ageOfChildrens")}
+                    />
+                  )}
+
                   <Counter
                     label={t('infant.label')}
                     subLabel={t('infant.sublabel')}
@@ -117,4 +129,6 @@ export default function RoomsModal({ data, setData, initialData }: RoomsModalPro
       </Modal>
     </>
   );
-}
+};
+
+export default RoomsModal;

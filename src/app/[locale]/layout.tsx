@@ -7,6 +7,7 @@ import Header from '@/components/Header';
 import { Toaster } from 'react-hot-toast';
 import { notFound } from 'next/navigation';
 import { Providers } from '../providers';
+import Footer from '@/components/Footer';
 
 interface LocaleMessages extends AbstractIntlMessages {
   metadata: {
@@ -70,6 +71,7 @@ export default async function RootLayout({
               },
             }}
           />
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

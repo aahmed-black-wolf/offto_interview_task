@@ -1,11 +1,13 @@
 import { useState, useCallback } from 'react';
 import axios from 'axios';
 import toaster from '@/toaster';
+import { useTranslations } from 'next-intl';
 
 interface RoomsData {
     rooms: number;
     adults: number;
     children: number;
+    ageOfChildrens: number;
     infants: number;
 }
 
@@ -42,6 +44,7 @@ interface HotelResponse {
 export const useGetHotels = () => {
     const [hotels, setHotels] = useState<HotelResponse | null>(null);
     const [isLoading, setIsLoading] = useState(false);
+    const t = useTranslations('search.HotelSearchContent');
 
     const searchHotels = useCallback(async ({ destination, checkIn, checkOut, roomsData }: HotelSearchParams) => {
         setIsLoading(true);
@@ -54,15 +57,24 @@ export const useGetHotels = () => {
                     CheckOutDate: checkOut,
                     Room: [
                         {
-                            NumberOfAdult: roomsData.adults,
+                            AgeOfChild: [roomsData.ageOfChildrens],
                             NumberOfChild: roomsData.children,
+                            NumberOfAdult: roomsData.adults,
                         }
                     ],
                 }
             );
+
+            if (response.data.data.items.length === 0) {
+                toaster.error(t('errors.no_hotels_found'));
+                setHotels(null);
+                return;
+            }
             setHotels(response.data);
+            toaster.success(t('success.hotels_found'));
+
         } catch (error: any) {
-            toaster.error(error?.response?.data?.message || 'Error fetching hotels');
+            toaster.error(t('errors.no_hotels_found'));
             setHotels(null);
         } finally {
             setIsLoading(false);

@@ -19,10 +19,10 @@
       "hotel": "Hotel",
       "packages": "Packages"
     },
-    "FlightSearchContent": {
+    "flight_content": {
       "placeholder": "Flight search content component"
     },
-    "PackagesSearchContent": {
+    "packages_content": {
       "placeholder": "Packages search content component"
     },
     "HotelSearchContent": {
@@ -39,10 +39,12 @@
         "rooms_adults_required": "Rooms and adults must be selected",
         "required_fields": "Please fill in all required fields",
         "dates_past": "Check-in and check-out dates cannot be in the past",
-        "checkout_before_checkin": "Check-out date must be after check-in date"
+        "checkout_before_checkin": "Check-out date must be after check-in date",
+        "no_hotels_found": "no hotels matches your search are found.",
+        "ages_of_childrens_required": "Ages of children must be selected"
       },
       "success": {
-        "hotels_found": "Hotels found successfully"
+        "hotels_found": "Hotels found successfully!"
       }
     }
   },
@@ -64,6 +66,10 @@
       "label": "Child",
       "sublabel": "From 2 to 11 years"
     },
+    "ageOfChildrens": {
+      "label": "Ages",
+      "sublabel": "All Ages of Children"
+    },
     "infant": {
       "label": "Infant",
       "sublabel": "Less than 2 years"
@@ -71,6 +77,11 @@
     "buttons": {
       "reset": "Reset",
       "done": "Done"
+    }
+  },
+  "footer": {
+    "content": {
+      "company_anme": "OffTo - Book Hotels & Travel Packages"
     }
   }
 }
