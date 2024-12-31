@@ -2,20 +2,95 @@
 @tailwind components;
 @tailwind utilities;
 
+/* represent <html/> element tag */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary: #00b3ba;
+  --secondary: #006b9e;
+  --gradient: #8acec8;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html,
+body {
+  height: 100%; /* Ensure full height & width for these elements */
+  width: 100%;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgba(0, 179, 186, 0.1);
+  background-repeat: no-repeat;
+  color: black;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+
+@layer utilities {
+  h1 {
+    color: var(--secondary);
+    font-size: 2rem;
+    font-weight: 800;
+  }
+
+  h2 {
+    color: #555559;
+    font-size: 1rem;
+  }
+
+  p {
+    color: #333;
+    font-size: 12px /* 14px */;
+    line-height: 1.25rem /* 20px */;
+    @apply text-gray-500;
+  }
+
+  .border {
+    @apply border-[1px] border-[#ccc];
+  }
+
+  .btn {
+    padding: 8px 50px;
+    border-radius: 20px;
+    height: fit-content;
+    width: fit-content;
+    color: white;
+  }
+
+  .count-dec {
+    /* padding: 1px; */
+    min-width: 25px;
+    min-height: 5px;
+    border-radius: 50%;
+    font-weight: 700;
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
+  }
+
+  .count-inc {
+    min-width: 25px;
+    min-height: 5px;
+    border-radius: 50%;
+    font-weight: 700;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+  }
+
+  .btn-primary {
+    background-color: var(--primary);
+  }
+  .btn-secondary {
+    background-color: var(--secondary);
+  }
+
+  .no-scrollbar {
+    /* Hide scrollbar in WebKit-based browsers (Chrome, Safari) */
+    -ms-overflow-style: none; /* For Internet Explorer 10+ */
+    scrollbar-width: none; /* For Firefox */
+    scrollbar-color: transparent transparent; /* For Firefox */
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+  }
 }

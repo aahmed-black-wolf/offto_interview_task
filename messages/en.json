@@ -1,0 +1,32 @@
+{
+  "NavBar": {
+    "Login": "Login"
+  },
+  "Booking": {
+    "title": "It's more than just a trip",
+    "subtitle": "Book your flight ticket and hotels in easy way",
+    "flight": "Flight",
+    "hotel": "Hotel",
+    "package": "Package",
+    "destination": "Destination",
+    "check in": "Check In",
+    "check out": "Check Out",
+    "passengers&rooms": "Passengers & Rooms",
+    "search": "Search",
+    "notFound": "No Available Hotels Found"
+  },
+
+  "select": {
+    "title": "Passengers & Rooms",
+    "subtitle": "Add passengers & rooms",
+    "room": "Room",
+    "rooms": "rooms",
+    "roomslabel": "Max number is 6 rooms",
+    "adults": "Adults",
+    "adultslabel": "From 2 to 11 years",
+    "child": "Child",
+    "childlabel": "Above 11 years",
+    "infant": "Infant",
+    "infantlabel": "Less than 2 years"
+  }
+}
