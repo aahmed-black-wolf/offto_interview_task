@@ -25,8 +25,8 @@ which should be used in the list.
 
 3. **creating complex functionality form components**
 
-   - you will find the two language files in [components] folder
+   - you will find the files in [components] folder
 
 4. **integrating APIs**
 
-   - you will find the two language files in [apis] folder
+   - you will find the files in [apis] folder
