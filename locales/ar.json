@@ -1,0 +1,87 @@
+{
+  "label": "اختر اللغة",
+  "lang": {
+    "en": "الإنجليزية",
+    "ar": "العربية"
+  },
+  "metadata": {
+    "title": "أوفتو - حجز الفنادق وباقات السفر",
+    "description": "ابحث واحجز أفضل الفنادق حول العالم. حجز سهل، عروض رائعة، وتجربة تخطيط سفر سلسة."
+  },
+  "errors": {
+    "no_cities_found": "لا توجد مدن تطابق بحثك"
+  },
+  "Home_page_main_title": "انها أكثر من مجرد رحلة",
+  "Home_page_main_subtitle": "احجز تذكرة طائرتك وفنادقك بطريقه سهله",
+  "search": {
+    "tabs": {
+      "flight": "الطيران",
+      "hotel": "الفنادق",
+      "packages": "الباقات"
+    },
+    "flight_content": {
+      "placeholder": "محتوى البحث عن الرحلات"
+    },
+    "packages_content": {
+      "placeholder": "محتوى البحث عن الباقات"
+    },
+    "HotelSearchContent": {
+      "labels": {
+        "check_in": "تسجيل الدخول",
+        "check_out": "تسجيل الخروج",
+        "search": "بحث",
+        "destination": "الوجهة"
+      },
+      "validation": {
+        "field_required": "هذا الحقل مطلوب"
+      },
+      "errors": {
+        "rooms_adults_required": "يجب اختيار الغرف والبالغين",
+        "required_fields": "يرجى ملء جميع الحقول المطلوبة",
+        "dates_past": "لا يمكن أن تكون تواريخ تسجيل الدخول والخروج في الماضي",
+        "checkout_before_checkin": "يجب أن يكون تاريخ المغادرة بعد تاريخ الوصول",
+        "no_hotels_found": "لم يتم العثور على أي فنادق.",
+        "ages_of_childrens_required": "يجب اختيار اعمار كل الاطفال"
+      },
+      "success": {
+        "hotels_found": "تم العثور على الفنادق بنجاح!"
+      }
+    }
+  },
+  "rooms_modal": {
+    "select_button": "اختر المسافرين والغرف",
+    "header": {
+      "title": "المسافرين والغرف",
+      "subtitle": "اختر المسافرين والغرف"
+    },
+    "rooms": {
+      "label": "عدد الغرف",
+      "sublabel": "الحد الأقصى 6 غرف"
+    },
+    "adult": {
+      "label": "البالغين",
+      "sublabel": "فوق 11 سنة"
+    },
+    "child": {
+      "label": "الأطفال",
+      "sublabel": "من 2 إلى 11 سنة"
+    },
+    "ageOfChildrens": {
+      "label": "الأعمار",
+      "sublabel": "جميع أعمار الأطفال"
+    },
+    "infant": {
+      "label": "الرضع",
+      "sublabel": "أقل من سنتين"
+    },
+    "buttons": {
+      "reset": "إعادة تعيين",
+      "done": "تم"
+    }
+  },
+  "footer": {
+    "content": {
+      "company_anme": "أوفتو - حجز الفنادق وباقات السفر"
+    }
+  }
+}
