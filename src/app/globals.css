@@ -26,71 +26,51 @@ main {
   width: 100%;
 }
 
+.no-scrollbar {
+  /* Hide scrollbar in WebKit-based browsers (Chrome, Safari) */
+  -ms-overflow-style: none; /* For Internet Explorer 10+ */
+  scrollbar-width: none; /* For Firefox */
+  scrollbar-color: transparent transparent; /* For Firefox */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
 @layer utilities {
   h1 {
-    color: var(--secondary);
-    font-size: 2rem;
-    font-weight: 800;
+    @apply text-secondary text-2xl font-extrabold;
   }
 
   h2 {
-    color: #555559;
-    font-size: 1rem;
+    @apply text-gray-700 text-sm;
   }
 
   p {
-    color: #333;
-    font-size: 12px /* 14px */;
-    line-height: 1.25rem /* 20px */;
-    @apply text-gray-500;
+    @apply text-gray-500 text-xs leading-5;
   }
 
   .border {
-    @apply border-[1px] border-[#ccc];
+    @apply border-solid border-[1px] border-gray-300;
   }
 
   .btn {
-    padding: 8px 50px;
-    border-radius: 20px;
-    height: fit-content;
-    width: fit-content;
-    color: white;
+    @apply px-12 py-2.5 rounded-full text-white;
   }
 
   .count-dec {
-    /* padding: 1px; */
-    min-width: 25px;
-    min-height: 5px;
-    border-radius: 50%;
-    font-weight: 700;
-    color: var(--secondary);
-    border: 2px solid var(--secondary);
+    @apply min-w-[25px] min-h-[5px] rounded-full font-bold text-secondary border-2 border-secondary;
   }
 
   .count-inc {
-    min-width: 25px;
-    min-height: 5px;
-    border-radius: 50%;
-    font-weight: 700;
-    color: var(--primary);
-    border: 2px solid var(--primary);
+    @apply min-w-[25px] min-h-[5px] rounded-full font-bold text-primary border-2 border-primary;
   }
 
   .btn-primary {
-    background-color: var(--primary);
+    @apply bg-primary;
   }
+
   .btn-secondary {
-    background-color: var(--secondary);
-  }
-
-  .no-scrollbar {
-    /* Hide scrollbar in WebKit-based browsers (Chrome, Safari) */
-    -ms-overflow-style: none; /* For Internet Explorer 10+ */
-    scrollbar-width: none; /* For Firefox */
-    scrollbar-color: transparent transparent; /* For Firefox */
-  }
-
-  .no-scrollbar::-webkit-scrollbar {
-    display: none; /* For Chrome, Safari, and Opera */
+    @apply bg-secondary;
   }
 }
